@@ -1,0 +1,10 @@
+flask
+flask_sqlalchemy
+Flask-Security-Too==5.1.2
+flask_restful
+celery
+Flask-Excel
+Jinja2
+flask_caching
+requests
+redis
