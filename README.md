@@ -94,7 +94,7 @@ The application uses the following data models:
 - **Campaign** - Campaign information and settings
 - **AdRequest** - Ad request details and status
 
-![ER Diagram](ER_diagram.png)
+![ER Diagram](ER diagram.png)
 
 ## API Documentation
 
