@@ -114,8 +114,8 @@ The application uses the following data models:
 
 1. **Clone the repository**
    ```bash
-   git clone [repository-url]
-   cd influencer-platform
+   git clone https://github.com/Katherine-Deborah/iescp
+   cd iescp
    ```
 
 2. **Install dependencies**
