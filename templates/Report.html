@@ -1,0 +1,38 @@
+<!-- This is for the monthly activity mail sent to the sponsors -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+  
+      <h2>Monthly activity: </h2>
+    
+      <div>
+        <h2>Campaign Status</h2>
+        <p>Total Campaigns: {{ stats.total_campaigns }}</p>
+      <p>Active Campaigns: {{ stats.active_campaigns }}</p>
+      <p>Completed Campaigns: {{ stats.completed_campaigns_ }}</p>
+      <p>Public Campaigns: {{ stats.public_campaigns }}</p>
+      <p>Private Campaigns: {{ stats.private_campaigns}}</p>
+      </div>
+      <div>
+        <h2>Ad Request Status</h2>
+        <h3> Sent </h3>
+        <p>Total Ad Requests: {{ stats.sent_total }}</p>
+        <p>Pending Requests: {{ stats.sent_pending }}</p>
+        <p>Accepted Requests: {{ stats.sent_accepted }}</p>
+        <p>Rejected Requests: {{ stats.sent_rejected }}</p>
+        <h3> Recieved </h3>
+        <p>Total Ad Requests: {{ stats.recieved_total }}</p>
+        <p>Pending Requests: {{ stats.recieved_pending }}</p>
+        <p>Accepted Requests: {{ stats.recieved_accepted }}</p>
+        <p>Rejected Requests: {{ stats.recieved_rejected }}</p>
+      </div>
+      
+    
+  </body>
+</html>

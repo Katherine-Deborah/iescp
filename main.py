@@ -1,13 +1,13 @@
 from flask import Flask
 from flask_security import SQLAlchemyUserDatastore, Security
 from werkzeug.security import generate_password_hash
-from applications.models import db, User, Role, Admin, Influencer
+from applications.models import db, User, Role, Influencer
 from config import DevelopmentConfig
 from applications.resources import api
 from applications.worker import celery_init_app
 import flask_excel as excel
 from celery.schedules import crontab
-# from applications.tasks import daily_reminder, monthly_activity_report
+from applications.tasks import daily_reminder,monthly_activity_report
 from applications.instances import cache
 
 def create_app():
@@ -36,31 +36,18 @@ def create_app():
 app = create_app()
 celery_app = celery_init_app(app)
 
-import logging
-import test_redis
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
-def test_redis_connection():
-    try:
-        r = test_redis.Redis(host='localhost', port=6379, db=0)
-        r.ping()
-        logger.info("Connected to Redis!")
-    except test_redis.ConnectionError as e:
-        logger.error(f"Failed to connect to Redis: {e}")
-
-# @celery_app.on_after_configure.connect
-# def send_email(sender, **kwargs):
-#     sender.add_periodic_task(
-#         crontab(hour=23, minute=11),  # Adjust time as needed
-#         daily_reminder.s(),
-#     )
-#     sender.add_periodic_task(
-#         crontab(day_of_month=1, hour=0, minute=0),  # Run monthly on the 1st
-#         monthly_activity_report.s(),
-#     )
+@celery_app.on_after_configure.connect
+def send_email(sender, **kwargs):
+    sender.add_periodic_task(
+        crontab(),
+        # crontab(minute=0, hour=0),
+        daily_reminder.s(),
+    )
+    sender.add_periodic_task(
+        crontab(),
+        # crontab(0, 0, day_of_month='2') ,
+        monthly_activity_report.s())
+    
 
 if __name__ == '__main__':
   app.run(debug=True)
-  test_redis_connection()

@@ -1,0 +1,500 @@
+/*Fonts used  */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../fonts/Orbitron-Medium.ttf');
+}
+@font-face {
+  font-family: 'Tiny';
+  src: url('../fonts/Tiny5-Regular.ttf');
+}
+
+
+/* Website Background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #F9F9E0;
+  color:#3AA6B9;
+  font-family: 'Orbitron';
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  font-size: 1.2rem;
+}
+
+
+/* Navigation Bar */
+.navbar {
+  background-color: #F9F9E0; 
+  color: #3AA6B9;
+  padding: 10px 0; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+}
+
+.nav-container {
+  width: 100%;
+  height: 100px;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+.company-name {
+  font-size: 30px; 
+  color: #3AA6B9; 
+  margin: 0; 
+  font-weight: bold; 
+}
+
+/* Search bar */
+.navbar-middle {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; 
+  justify-content: center; 
+}
+
+.search-bar {
+    padding: 5px;
+    border: 2px solid black;
+  background-color: transparent;
+    border-radius: 5px; 
+    font-size: 16px;
+    width: 300px; 
+} 
+
+.search-icon{
+  background-color:transparent;
+  border: none;
+}
+
+.search-icon :hover{
+  background-color: #FCDC94;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.navbar-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; 
+}
+
+.nav-icon :hover{
+  background-color: #FCDC94;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.icon {
+  width: 24px; 
+  height: auto; 
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #FFD0D0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-menu a:hover {
+  background-color: #FF9EAA;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.stat-heading {
+  color: #3AA6B9;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #FFD0D0;
+  border: 3px solid black;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Tiny';
+  font-size: 20px; 
+  padding: 10px 30px; 
+  width: 60%; 
+  max-width: 200px; 
+  margin: 15px auto; 
+  display: block; 
+  text-align: center; 
+}
+.btn-primary:hover {
+background-color: #FF9EAA; 
+color: black;
+}
+
+/* Dashboard */
+.dash-container {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background: #FCDC94;
+  border-radius: 10px;
+  border: 2px solid #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* influencer dashboard */
+.influencer-dash {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 2%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: black;
+  background: #FCDC94;
+  border-radius: 10px;
+  border: 2px solid #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dash-container h2{
+  font-size: 25px;
+}
+
+.user-card {
+  font-family: 'Tiny';
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FFFED3;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 40px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.user-info {
+  flex: 1;
+  margin-right: 70px;
+}
+
+.user-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.user-actions .btn-primary {
+  font-size: 14px; 
+  padding: 5px 10px; 
+  cursor: pointer;
+  width: 90px;
+}
+/* Accept Button */
+.btn-accept {
+  background-color: #219C90;
+  border: 3px solid black;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Tiny';
+  font-size: 15px; 
+  padding: 5px 10px; 
+  width: 90px; 
+  max-width: 200px; 
+  margin: 15px auto; 
+  display: block; 
+  text-align: center;
+}
+.btn-accept:hover {
+  background-color: #98d7d1;
+  color: #219C90; 
+}
+/* Reject Button */
+.btn-reject {
+  background-color: #EE4E4E;
+  border: 3px solid black;
+  color: white;
+  border-radius: 4px;
+  font-family: 'Tiny';
+  font-size: 15px; 
+  padding: 5px 10px; 
+  width: 90px; 
+  max-width: 200px; 
+  margin: 15px auto; 
+  display: block; 
+  text-align: center;
+}
+.btn-reject:hover {
+  background-color: #f99a9a; 
+  color: #EE4E4E; 
+}
+
+.influencer-profile {
+  
+  max-width: 25%;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.profile-pic {
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%; 
+  margin-bottom: 10px;
+}
+
+.profile-details {
+  text-align: center;
+}
+
+.main-content {
+  padding: 20px;
+  max-width: 75%;
+  width: 70%;
+  background-color: #F9F9E0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Campaign page  */
+.campaign-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+}
+
+.campaign-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; 
+  padding: 10px 0;
+}
+
+.campaign-box {
+  width: 200px; 
+  height: auto; 
+  margin-right: 10px; 
+  background-color: #FCDC94;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block; 
+  vertical-align: top; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.campaign-text {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 20px;
+  font-family: 'Tiny';
+  color: black;
+}
+
+.campaign-info {
+  width: 300px;
+  padding-top: 10px;
+  padding-left: 50px;
+  color: black;
+}
+
+.add-campaign-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 40%; 
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-campaign-btn img {
+  position: fixed;
+  bottom: 20px;
+  left: 40%; 
+  width: 80px; 
+  height: 80px;
+}
+
+.add-campaign-btn:hover {
+  background-color: #FCDC94; 
+}
+
+.down-campaign-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 40%; 
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.down-campaign-btn img {
+  position: fixed;
+  bottom: 20px;
+  right: 40%; 
+  width: 80px; 
+  height: 80px;
+}
+
+.down-campaign-btn:hover {
+  background-color: #FCDC94; 
+}
+
+
+/* Login/Registration and all the other forms */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container {
+  font-family: 'Tiny';
+  color: black;
+  background:  #FCDC94;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid black;
+  margin-top: 3%; 
+  width: 300px;
+}
+
+.form-header {
+  margin-bottom: 20px;
+  font-family: 'Tiny';
+}
+.form-header h2 {
+  margin: 0;
+}
+
+.form-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.form-group label {
+  flex: 1;
+  margin-right: 10px;
+  min-width: 80px;
+}
+.form-group input,
+.form-group select {
+  flex: 2;
+  padding: 8px;
+  background-color: transparent;
+  border-radius: 4px; 
+  border: 2px solid black;
+  width: 100%;
+}
+
+.presence {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+  
+.icon-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+.icon-label img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"]:checked + .icon-label {
+  border: 2px solid black;
+  background-color:#3AA6B9;
+  border-radius: 5px;
+}
+
+
